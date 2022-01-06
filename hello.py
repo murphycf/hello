@@ -1,3 +1,8 @@
+from flask import Flask
 
-name = input("What's your name? ")
-print("Hello" , name)
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
